@@ -59,17 +59,17 @@ import { ref } from 'vue';
       </div>
     </div>
 
-    <!-- <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.008 -0.1 283.36 112" width="373.97" height="147.81">
-        <path d="M282.18,111.9H11.94a11.94,11.94,0,0,1-4.2-23.12l138-51.94V28.62a1.28,1.28,0,0,1,1.28-1.29A12.38,12.38,0,1,0,135.2,11.39a6.13,6.13,0,0,0-.16,1.16c-.12,1.3-.3,3.27-2.1,3.66a1.28,1.28,0,0,1-.55-2.51,13.2,13.2,0,0,1,.09-1.39,8.38,8.38,0,0,1,.26-1.66,15,15,0,1,1,15.61,19.2v7.88a1.3,1.3,0,0,1-.84,1.2L8.64,91.19a9.37,9.37,0,0,0,3.3,18.14H282.18a1.29,1.29,0,0,1,0,2.57Z" style="fill: rgb(35, 31, 32);"></path>
-      </svg>
-    </div> -->
   </div>
 
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </template>
 
 <style scoped>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .container{
     position: relative;
     width: 850px;
@@ -91,12 +91,16 @@ import { ref } from 'vue';
     color: #333;
     padding: 40px;
     z-index: 1;
+    visibility: visible;
     transition: .6s ease-in-out 1.2s, visibility 0s 1s;
   }
 
   .container.active .form-box{
     right: 50%;
 
+  }
+  .container.active .form-box.login{
+    visibility: hidden;
   }
 
   .form-box.register{
